@@ -79,7 +79,6 @@ function DataCard({ eyebrow, heading, sub, underline }) {
 export default function About() {
   return (
     <section
-      id="about"
       className="relative pt-32 pb-20 px-8 max-w-7xl mx-auto min-h-screen"
     >
       {/* ── Ambient background glows ── */}

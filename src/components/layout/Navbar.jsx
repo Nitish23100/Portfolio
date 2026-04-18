@@ -1,8 +1,7 @@
 // === NAVBAR ===
-// Receives activeSection + onNav from App.jsx.
-// Click navigates between sections — no page scrolling.
+// Fixed top nav. onNav(id) smooth-scrolls to the target section.
+// activeSection is inferred by IntersectionObserver in App.jsx.
 // Active link: white + CC0000 bottom border.
-// Inactive: white/60, hover red glow.
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { NAV_LINKS } from '../../constants';
@@ -16,7 +15,7 @@ export default function Navbar({ activeSection, onNav }) {
   };
 
   return (
-    <nav className="relative z-40 w-full bg-[#131313]/80 backdrop-blur-md border-b border-white/5 flex justify-between items-center px-8 py-4 flex-shrink-0">
+    <nav className="fixed top-0 left-0 right-0 z-50 w-full bg-[#131313]/80 backdrop-blur-md border-b border-white/5 flex justify-between items-center px-8 py-4">
 
       {/* Logo / brand */}
       <button
@@ -49,7 +48,7 @@ export default function Navbar({ activeSection, onNav }) {
         })}
       </div>
 
-      {/* Right: mobile hamburger */}
+      {/* Mobile hamburger */}
       <div className="flex items-center">
         <button
           className="md:hidden p-1 text-white"

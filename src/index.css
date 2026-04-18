@@ -88,7 +88,6 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    overflow: hidden;   /* lock page-level scroll */
     height: 100%;
   }
 
@@ -98,8 +97,6 @@
     background-color: #131313;
     color: #e5e2e1;
     font-family: 'Inter', sans-serif;
-    overflow: hidden;   /* lock page-level scroll */
-    height: 100%;
     -webkit-font-smoothing: antialiased;
   }
 
@@ -116,7 +113,7 @@
   }
 
   #root {
-    height: 100%;
+    min-height: 100vh;
   }
 
   * {

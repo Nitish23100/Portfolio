@@ -65,7 +65,6 @@ const TECH_TAGS = [
 function HeroSection({ onNav }) {
   return (
     <section
-      id="home"
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6"
     >
       {/* Radial red eclipse background */}
